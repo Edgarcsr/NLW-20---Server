@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node --env-file .env --experimental-strip-types --no-warnings src/server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "db:seed": "node --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts",
     "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts"
   },
@@ -24,6 +26,7 @@
     "@fastify/cors": "^11.0.1",
     "drizzle-orm": "^0.44.2",
     "fastify-type-provider-zod": "^5.0.1",
-    "postgres": "^3.4.7"
+    "postgres": "^3.4.7",
+    "zod": "^3.25.76"
   }
 }
